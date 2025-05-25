@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@plugin 'tailwind-scrollbar';
+
+@theme {
+  --font-clashDisplay: "Clash Display";
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("../fonts/ClashDisplay.otf");
+}
+
+.group:hover .rightHover {
+  filter: invert(22%) sepia(29%) saturate(7412%) hue-rotate(315deg)
+    brightness(89%) contrast(102%);
+}
+
+.custom-box-border {
+  position: absolute;
+  clip-path: polygon(
+    7px 0%,
+    100% 0%,
+    100% 10px,
+    100% 100%,
+    calc(100% - 7px) 100%,
+    0% 100%,
+    0% calc(100% - 7px),
+    0% 0%
+  );
+}
+
+.custom-box-border::before,
+.custom-box-border::after {
+  content: "";
+  position: absolute;
+  border: 2px solid #d3176d;
+  width: 30px;
+  height: 30px;
+  z-index: 10;
+}
+.cut {
+  clip-path: polygon(
+    30px 0,
+    100% 0,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0 30px
+  );
+}
+
+.custom-box-border::before {
+  top: 5px;
+  right: 5px;
+  border-bottom: none;
+  border-left: none;
+}
+
+.custom-box-border::after {
+  bottom: 5px;
+  left: 5px;
+  border-top: none;
+  border-right: none;
+}
+
+.price-button {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #ff007f;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: transparent;
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0% 100%);
+}
+
+.custom-swiper .swiper-pagination-bullet {
+  border-radius: 0;
+  background-color: #555;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+.custom-swiper .swiper-pagination-bullet-active {
+  background-color: #d3176d;
+}
+
+.custom-swiper .swiper-button-prev,
+.custom-swiper .swiper-button-next {
+  color: #d3176d !important;
+}
+
+.loading {
+  filter: invert(20%) sepia(80%) saturate(3064%) hue-rotate(316deg)
+    brightness(85%) contrast(101%);
+}
+
+.quotation {
+  filter: invert(24%) sepia(42%) saturate(7225%) hue-rotate(319deg)
+    brightness(83%) contrast(99%);
+}
